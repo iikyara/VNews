@@ -1,0 +1,5 @@
+.arrow:before{
+  font-family: "Font Awesome 5 Free";
+  -webkit-font-smoothing: antialiased;
+  content: "\f0a9";
+}

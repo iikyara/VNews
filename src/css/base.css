@@ -1,0 +1,19 @@
+html, body{
+  overflow: hidden;
+}
+
+html{
+  font-size: 100%;
+}
+
+body{
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
+  font-size: 1em;
+}
+
+h1{
+  font-size: 1.4em;
+}

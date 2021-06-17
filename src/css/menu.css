@@ -1,0 +1,244 @@
+#search_button{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2em;
+  width: 100%;
+  background-color: #55F;
+}
+
+/********************************************/
+/* メニューを開くためのスタイル                */
+/********************************************/
+/* サイドオープン時にメインコンテンツを覆う部分 */
+.overlay {
+  content: '';
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0);
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  z-index: 4;
+}
+.overlay::after {
+  /*content: "クリックで閉じる";*/
+  visibility: hidden;
+  position: fixed;
+  top: 40%;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 50px;
+  color: rgba(255,255,255,0);
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+.side-open .overlay {
+  visibility: visible;
+  cursor: pointer;
+  background: rgba(0,0,0,.7);
+}
+.side-open .overlay::after {
+  visibility: visible;
+  color: rgba(255,255,255,.8);
+}
+
+/* サイドメニュー ※リストのスタイルは省略 */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 600px;
+  height: 100%;
+  padding-top: 70px;
+  text-align: left;
+  font-size: 1em;
+  background: #2A408E;
+  overflow-y: auto;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.4);
+  z-index: 2;
+}
+
+/* 開閉用ボタン ※ボタンの細かいスタイルは省略 */
+.side-menu-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  background: #ccc;
+  cursor: pointer;
+  z-index: 5;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+.side-menu-btn i{
+  position: absolute;
+  color: #555;
+  font-size: 40px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+.side-menu-btn:hover{
+  background-color: #aaa;
+}
+
+/* メインコンテンツ */
+.contents {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 13px;
+  background: #F8F8F8;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  z-index: 3;
+}
+
+/* サイドメニューオープン */
+.side-open .contents,
+.side-open .overlay {
+  -webkit-transform: translate3d(-600px, 0, 0);
+  transform: translate3d(-600px, 0, 0);
+}
+
+/********************************************/
+/* メニューを遷移するためのスタイル         */
+/********************************************/
+.change-menu .topicsList li{
+  -webkit-transform: translate(500px);
+  transform: translate(500px);
+}
+
+.change-menu{
+  -webkit-transform: translate3d(-500px, 0, 0);
+  transform: translate3d(-500px, 0, 0);
+}
+
+/********************************************/
+/* メニューの見た目                         */
+/********************************************/
+.topicsList{
+  padding: 0;
+  margin: 0;
+}
+.topicsList li{
+	display: inline-block;
+  position: relative;
+	font-size: 1.5em;
+  color: white;
+  width: 100%;
+  height: 3.0em;
+  /* ホバー時の動きをなめらかにする */
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+.topicsList li .icon{
+  display: inline-block;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 3.0em;
+  height: 3.0em;
+}
+.topicsList li .icon i{
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.topicsList li .topic-title{
+  display: inline-block;
+  position: absolute;
+  /* 文字の位置を調整 */
+  -webkit-transform: translateY(0.75em);
+  transform: translateY(0.75em);
+}
+.topicsList li .topic-wrapper{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.topicsList li:hover{
+  background-color: red;
+  cursor: pointer;
+}
+.topicsList li:active{
+  transform: scale(0.95);
+}
+
+/********************************************/
+/* アンダーメニューの見た目                   */
+/********************************************/
+/* サイドアンダーメニュー ※リストのスタイルは省略 */
+.side-under-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 500px;
+  height: 100%;
+  padding-top: 20px;
+  text-align: left;
+  font-size: 1em;
+  color: white;
+  background: #1a3261;
+  overflow-y: auto;
+  z-index: 1;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+/*
+.pull-down-list .favorite_list{
+  display: none;
+}
+.pull-down-list .favorite_list{
+
+}
+*/
+.topicTitle{
+  font-size: 2em;
+  margin-left: 20px;
+}
+.newsList ul{
+  list-style-type: none;
+  padding-left: 0;
+}
+.news_item{
+  padding-left: 10px;
+  border-top: medium solid #aaa;
+}
+
+.news_item:hover{
+  background-color: #41618c;
+  cursor: pointer;
+}
+
+.vtuber-image{
+  width: 100%;
+}
+
+.vtuber-image:hover{
+  cursor: pointer;
+  box-shadow: 10px 10px 15px -10px gray;
+}

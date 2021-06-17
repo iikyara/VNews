@@ -1,0 +1,49 @@
+.fukidashi{
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
+
+.fukidashiBox{
+  position: relative;
+  padding: 0.5em 1em;
+  font-weight: bold;
+  color: #6091d3;
+  background: #fff;
+  border: solid 3px #6091d3;
+  border-radius: 10px;
+}
+
+.fukidashi:after{
+  content: "";
+  position: absolute;
+  right: 10px;
+  bottom: -20px;
+  width: 0px;
+  height: 0px;
+  margin: auto;
+  border-style: solid;
+  border-color: #6091d3 transparent transparent transparent;
+  border-width: 20px 20px 0 20px;
+}
+
+.fukidashiMessage{
+  padding: 0;
+  margin: 0;
+  font-size: 2em;
+}
+
+#vtuber-viewer{
+  height: 500px;
+  width: 500px;
+  pointer-events: none;
+}
+
+#vtuber-viewer > div{
+  pointer-events: none;
+}
+
+#vtuber-viewer > canvas{
+  pointer-events: none;
+}

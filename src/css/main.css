@@ -1,0 +1,25 @@
+#free1{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#free2{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+#free3{
+  position: absolute;
+}
+
+#free4{
+  position: absolute;
+}
+
+#free5{
+  position: absolute;
+}

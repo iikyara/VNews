@@ -1,0 +1,24 @@
+/*
+ * 上部のタイトル領域のデザインを定義
+ * 左側にロゴ，右側にログインボタン（ログアウトボタン）とVTuber選択ボタンを配置
+ * あとサインアップボタンも
+ */
+
+.title{
+  background-color: red;
+  width: 100%;
+}
+
+.title .logo{
+  /* ロゴ画像を載せる */
+  
+}
+
+.title .login{
+  
+  
+}
+
+.title .selectvt{
+  
+}
